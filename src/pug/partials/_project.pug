@@ -1,0 +1,79 @@
+// Project
+section.project#project
+  .wrapper.flex-container
+
+    .project__slider
+
+      //- Custom CSS Only slider
+      .slider
+        input#slide21(type='radio', name='slider2', checked)
+        input#slide22(type='radio', name='slider2')
+        input#slide23(type='radio', name='slider2')
+        input#slide24(type='radio', name='slider2')
+        input#slide25(type='radio', name='slider2')
+        input#slide26(type='radio', name='slider2')
+        .slider__slides
+          .slider__overflow
+            .slider__inner
+              .slider__item
+                img(src='img/project1.jpg' alt="Дай 5")
+                i.svg-like.project__like
+              .slider__item: img(src='img/project1.jpg' alt="Дай 5")
+              .slider__item: img(src='img/project1.jpg' alt="Дай 5")
+              .slider__item: img(src='img/project1.jpg' alt="Дай 5")
+              .slider__item: img(src='img/project1.jpg' alt="Дай 5")
+              .slider__item: img(src='img/project1.jpg' alt="Дай 5")
+        .slider__controls
+          label(for='slide21')
+          label(for='slide22')
+          label(for='slide23')
+          label(for='slide24')
+          label(for='slide25')
+          label(for='slide26')
+      //- End Slider
+
+      .project__remark сума необмежена
+      a(href="#").project__btn.c-button Допомогти
+
+
+    .project__content
+      h2.project__title Збираємо кошти на харчування тварин #Дай5!
+      div.project__place Притулок Сіріус
+      div.project__text
+        p.
+          Що можна купити на 5 гривень? Більше, ніж ти думаєш – цілий
+          день ситого життя для одного безпритульного собаки!#[br]
+          Ми знову запускаємо естафету #ДАЙ5 і закликаємо всіх
+          підтримати понад дві тисячі вихованців найбільшого в Україні
+          притулку для тварин "Сіріус"
+        p.
+          Поліпшити умови очікування справжнього дому просто:
+          перераховуй 5 або більше гривень на картку притулку#[br]
+          Приватбанк#[br]
+          #[span 5169 3305 1043 1114], #[br]
+          Мезінова О. В. (директора притулку)#[br]
+          або через сайт#[br]
+          #[a(href="http://sheltersirius.org") http://sheltersirius.org] і передай естафету друзям.
+        p.
+          Також можна налаштувати регулярний платіж і годувати
+          хвостів на постійній основі. Як це зробити, дивись тут:#[br]
+          #[a(href="//goo.gl/cYzT3Y") goo.gl/cYzT3Y]
+
+    aside.project__contacts.contacts
+      .contacts__title КОНТАКТИ Притулок Сіріус
+      .contacts__contact.contacts__contact--phone
+        a(href="tel:+380671234567") тел: 067 123 45 67
+      .contacts__contact.contacts__contact--social
+        .social.social--hide-text
+          a(href="//facebook.com").social__fb #[i.svg-fb]facebook
+          a(href="//vk.com").social__vk #[i.svg-vk]vkontakte
+      .contacts__contact.contacts__contact--url
+        a(href="//www.dogcat.com.ua").contacts__link www.dogcat.com.ua
+      .contacts__contact.contacts__contact--email
+        a(href="mailto:").contacts__link.c-button Написати нам
+      .contacts__contact.contacts__contact--address
+        | Україна, Київська область, село Федорівка
+      .contacts__contact.contacts__contact--map
+        img(src="img/map.jpg", alt="Мапа села Федорівка")
+      a.contacts__more Переглянути інші проекти організації
+// End Project

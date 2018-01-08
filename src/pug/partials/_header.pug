@@ -1,0 +1,42 @@
+// HEADER
+header.main-header
+  .wrapper.flex-container
+    .main-header__logo
+      .logo
+        a.logo__link(href="/")
+          img.logo__img(src="img/logo.png", alt="Поряд - соціальні проекти", width="140", srcset="img/logo2x.png 2x")
+    .main-header__search
+      .search
+        button.search__btn
+          i.svg-search
+          |Пошук
+        input(type="text" placeholder="Назва проекта").search__input
+    .main-header__menu
+      nav.menu
+        input.menu__toggle(type="checkbox", id="mt", checked)
+        label.menu__label(for="mt") Меню
+        ul.menu__list
+          li.menu__item
+            a.menu__link(href="#") Волонтерство
+          li.menu__item
+            a.menu__link(href="#") Підбір Проекта
+          li.menu__item
+            a.menu__link(href="#") Стан Проектів
+          li.menu__item
+            a.menu__link(href="#") Новини
+    .main-header__actions
+      .action
+        button.action__like
+          i.svg-like
+          span 2
+        .action__user
+          button.action__lang
+              i.svg-ar-left
+              span Ук
+          a.action__login
+            i.svg-login
+            span Увійти
+    .main-header__intro
+      h1.main-header__title Найбільша #[br] в Україні #[br] Біржа Добра
+      p.main-header__slogan допомагати просто
+// End HEADER

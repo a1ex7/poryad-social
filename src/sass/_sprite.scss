@@ -1,0 +1,132 @@
+%svg-common {
+	background: url("../img/sprites/sprite.svg") no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.svg-ar-down {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 11px;
+	height: 10px;
+}
+
+.svg-ar-left {
+	@extend %svg-common;
+	background-position: 0.6578947368421053% 0.9652509652509652%;
+	width: 10px;
+	height: 11px;
+}
+
+.svg-close {
+	@extend %svg-common;
+	background-position: 1.2727272727272727% 2.0689655172413794%;
+	width: 32px;
+	height: 32px;
+}
+
+.svg-cloud1 {
+	@extend %svg-common;
+	background-position: 4.579078965784776% 6.744881843668911%;
+	width: 524.562px;
+	height: 261.219px;
+}
+
+.svg-cloud2 {
+	@extend %svg-common;
+	background-position: 55.95353339787028% 45%;
+	width: 649px;
+	height: 347px;
+}
+
+.svg-equalizer {
+	@extend %svg-common;
+	background-position: 74.36363636363636% 65.22167487684729%;
+	width: 32px;
+	height: 32px;
+}
+
+.svg-fb {
+	@extend %svg-common;
+	background-position: 75.93486127864898% 67.83968719452591%;
+	width: 24px;
+	height: 24px;
+}
+
+.svg-gp {
+	@extend %svg-common;
+	background-position: 77.38238841978287% 70.18572825024438%;
+	width: 24px;
+	height: 24px;
+}
+
+.svg-instagram {
+	@extend %svg-common;
+	background-position: 78.82991556091677% 72.53176930596285%;
+	width: 24px;
+	height: 24px;
+}
+
+.svg-like {
+	@extend %svg-common;
+	background-position: 80.3743961352657% 74.8046875%;
+	width: 26px;
+	height: 23px;
+}
+
+.svg-login {
+	@extend %svg-common;
+	background-position: 82.14285714285714% 77.20156555772994%;
+	width: 30px;
+	height: 25px;
+}
+
+.svg-logo_min {
+	@extend %svg-common;
+	background-position: 90.89121887287025% 86.04651162790698%;
+	width: 156px;
+	height: 101px;
+}
+
+.svg-menu {
+	@extend %svg-common;
+	background-position: 93.06393244873341% 89.44281524926686%;
+	width: 24px;
+	height: 24px;
+}
+
+.svg-preloader {
+	@extend %svg-common;
+	background-position: 94.55776894353566% 91.86248997241191%;
+	width: 24.812px;
+	height: 24.82px;
+}
+
+.svg-search {
+	@extend %svg-common;
+	background-position: 95.67307692307692% 93.68318756073859%;
+	width: 18px;
+	height: 18px;
+}
+
+.svg-shevron-down {
+	@extend %svg-common;
+	background-position: 97.90025241238992% 95.56889281199302%;
+	width: 37.469px;
+	height: 19.469px;
+}
+
+.svg-shevron-right {
+	@extend %svg-common;
+	background-position: 98.56459330143541% 97.6608187134503%;
+	width: 10px;
+	height: 21px;
+}
+
+.svg-vk {
+	@extend %svg-common;
+	background-position: 100% 100%;
+	width: 24px;
+	height: 24px;
+}
+

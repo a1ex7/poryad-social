@@ -1,0 +1,85 @@
+// Positions
+section.positions#positions
+  .wrapper.flex-container
+
+    input.positions__filters-toggle(type="checkbox", id="ft")
+    label.positions__filters-label(for="ft") Підбір допомоги
+    aside.positions__filters
+      .positions__filter.filter
+        .filter__title.hide-sm Підбір допомоги
+        .filter__block
+          .filter__caption.c-button Прибрати параметри пошуку
+          .filter__content
+            .filter__item
+              +checkbox-item('Фінансова', 'f11', 'checked')
+            .filter__item
+              +checkbox-item('Матеріальна', 'f12')
+            .filter__item
+              +checkbox-item('Послуги', 'f13')
+
+      .positions__filter.filter.filter--check
+        .filter__item-check
+          +checkbox-item('Притулки для тварин', 'f31', 'checked')
+          +checkbox-item('освіта', 'f32')
+          +checkbox-item('інваліди', 'f33')
+          +checkbox-item('переселенці зони ато', 'f34')
+          +checkbox-item('військові', 'f35')
+          +checkbox-item('літні люди', 'f36')
+          +checkbox-item('діти', 'f37')
+
+      .positions__filter.filter.filter--select
+        .filter__title
+          a#sort Впорядкувати
+          i.svg-shevron-right
+          | Останні додані
+
+      .positions__filter.filter
+        .filter__title Притулки
+        .filter__block
+          .filter__caption.c-button Показати всі позиції
+          .filter__content
+            .filter__item
+              +checkbox-item('амеда', 'f21', 'checked')
+            .filter__item
+              +checkbox-item('сіріус', 'f22', 'checked')
+            .filter__item
+              +checkbox-item('милосердя', 'f23', 'checked')
+            .filter__item
+              +checkbox-item('громадська ініціатива', 'f24', 'checked')
+            .filter__item
+              +checkbox-item('хвости і лапи', 'f25', 'checked')
+            .filter__item
+              +checkbox-item('пан коцький', 'f26')
+            .filter__item
+              +checkbox-item('звіринець', 'f27')
+
+    main.positions__content
+      h2.positions__title Притулки для тварин
+
+      .positions__items
+        +positions('Збираємо кошти на харчування тварин', 'Притулок Сіріус', 'position1.jpg') // (class='positions__hovered--active')
+        +positions('Необхідно провести вакцинацію собак', 'Притулок Сіріус', 'position2.jpg')
+        +positions('Потрібні кошти на лікування Шаріка', 'Притулок Амеда', 'position3.jpg')
+        +positions('Допоможіть Мурчику на потез задньої лапи', 'Притулок Милосердя', 'position4.jpg')
+        +positions('Збираємо кошти для благоустрою м. Київ', 'Грамадська ініціатива', 'position5.jpg')
+        +positions('Збираємо на харчування собак', 'Притулок Хвости і лапи', 'position6.jpg')
+
+      .positions__controls.controls
+        .controls__preloader
+          i.svg-preloader
+        button.controls__more-btn
+          i.svg-ar-down
+        .controls__label
+          | Показати більше позицій
+        ul.controls__points
+          li.controls__point
+            a.controls__link(href="#page1") 1
+          li.controls__point.controls__point--active
+            a.controls__link.controls__link--active(href="#page2") 2
+          li.controls__point
+            a.controls__link(href="#page3") 3
+          li.controls__point
+            a.controls__link(href="#page4") 4
+          li.controls__point
+            a.controls__link(href="#page5") 5
+// End Positions

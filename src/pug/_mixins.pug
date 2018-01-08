@@ -1,0 +1,29 @@
+//- Mixins
+
+mixin positions(descr, place, image)
+  article.positions__item
+    .positions__hovered(class!=attributes.class)
+      .positions__image
+        img(src=`img/${image}`, alt="Позиція")
+        button.positions__close-btn
+          i.svg-close X
+        a(href="#project").positions__info-btn Info
+        button.positions__like
+          i.svg-like Like
+      a.positions__link(href="#project")
+        p.positions__descr= descr
+        p.positions__place= place
+      .positions__inner
+        .positions__remark сума необмежена
+        a(href="#").positions__btn.c-button Допомогти
+
+mixin deals(descr, image)
+  .deals__item
+    a.deals__link(href="#")
+      .deals__image
+        img(src=`img/${image}`, alt="Проекти")
+      p.deals__descr= descr
+
+mixin checkbox-item(text, id, checked)
+  input(type="checkbox", id=id, checked=checked)
+  label(for=id)= text

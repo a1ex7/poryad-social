@@ -1,0 +1,233 @@
+/* Header */
+
+.main-header
+  .wrapper
+    align-items: flex-end
+    border-left: none
+    border-right: none
+    +lg()
+      padding-right: 15px
+      padding-left: 15px
+  color: $dark-color
+  background-color: transparent
+  font: 15px $font-header
+  letter-spacing: $lsh
+  text-transform: uppercase
+
+  position: absolute
+  z-index: 2
+  right: 0
+  left: 0
+  top: 0
+
+  &__logo
+    flex: 1 0
+    padding-top: 10px
+    +sm()
+      flex: none
+
+  &__search
+    padding: 15px
+    max-width: 230px
+    flex: 1 1
+    +lg()
+      flex-grow: 0
+    +md()
+      padding: 15px 5px
+    +xs()
+      position: absolute
+      top: 0
+      +align('h')
+      padding: 12px 5px
+
+  &__menu
+    align-self: stretch
+    +lg()
+      letter-spacing: 1px
+    +sm()
+      margin-right: auto
+    +xs()
+      margin-right: 0
+
+  &__actions
+    flex: 0 1
+    padding-bottom: 16px
+    padding-left: 9px
+    +xs()
+      padding-left: 0
+
+  &__intro
+    position: absolute
+    z-index: 1
+    top: 213%
+    left: 6%
+    +lg()
+      left: 11%
+    +sm()
+      top: 140%
+    +xs()
+      top: 110%
+      +align('h')
+      text-align: center
+
+  &__title
+    font: 36px/42px $font-header
+    font-weight: 900
+    color: $white-color
+    text-transform: uppercase
+    letter-spacing: 7.5px
+    br
+      +xs()
+        display: none
+
+  &__slogan
+    margin-top: 15px
+    text-transform: lowercase
+    +xs()
+      display: none
+
+
+.search
+  position: relative
+  &__btn
+    +reset-btn()
+    +size(30px)
+    font-size: 0 /* Text hiding */
+    position: absolute
+    right: 0
+    top: calc(50% - 15px)
+  &__input
+    width: 100%
+    min-width: 140px
+    text-transform: uppercase
+    +placeholder()
+      color: $dark-color
+      letter-spacing: $lsh
+      +lg()
+        letter-spacing: 1px
+      +md()
+        letter-spacing: 0
+        font-size: 12px
+
+.menu
+  display: flex
+  height: 100%
+  position: relative
+
+  &__list
+    display: flex
+    justify-content: space-between
+    height: 100%
+    +sm()
+      flex-direction: column
+      position: absolute
+      z-index: 10
+      top: 125px
+      left: -70px
+      width: 200px
+      height: auto
+      background-color: $primary-color
+
+  &__item
+    +transition()
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    border-left: 1px solid $wrapper-border-color
+    &:last-child
+      border-right: 1px solid $wrapper-border-color
+    +sm()
+      border: 1px solid $wrapper-border-color
+      margin-top: -1px
+  &__link
+    display: block
+    padding: 77px 12px 22px 13px
+    &:hover
+      background-color: $white-color
+      box-shadow: 5px 9px 14.55px 0.45px rgba(0, 1, 1, 0.15)
+    +md()
+      padding: 77px 5px 22px 5px
+    +sm()
+      padding: 22px 10px
+      text-align: center
+
+
+  /* Checkbox showing mobile menu */
+
+  &__toggle
+    display: none
+    &:checked ~ .menu__list
+      +sm()
+        display: none
+    &:unchecked ~ .menu__list
+      +sm()
+        display: block
+
+  &__label
+    +bg-center('../img/sprites/sprite.svg#menu')
+    +transition(opacity)
+    background-size: 24px 24px
+    padding: 77px 15px 22px 15px
+    display: none
+    +sm()
+      display: block
+    cursor: pointer
+    &:hover
+      opacity: 0.5
+
+.action
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+
+  &__user
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__lang
+    +reset-btn()
+    padding: 8px 20px 8px 5px
+    +md()
+      padding: 5px 0
+    span
+      text-transform: uppercase
+      display: inline-block
+      vertical-align: middle
+      margin-left: 10px
+      &:hover
+        opacity: 0.5
+
+  &__like
+    +reset-btn()
+    margin-right: 30px
+    +lg()
+      margin-right: 5px
+    +sm()
+      margin-right: 20px
+    i
+      margin: 5px
+    span
+      color: $white-color
+      font: 24px $font-header
+      vertical-align: middle
+    &:hover i
+      opacity: 0.5
+
+  &__login
+    display: flex
+    flex-direction: column
+    align-items: center
+    i
+      margin: 5px
+      margin-right: 18px
+      +md()
+        margin-right: 5px
+    span
+      padding: 3px 8px 5px 2px
+      +md()
+        padding: 5px 0
+        letter-spacing: 1px
+    &:hover
+      opacity: 0.5
+      color: $dark-color

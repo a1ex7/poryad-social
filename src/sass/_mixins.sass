@@ -1,0 +1,109 @@
+/*  Mixins */
+
+=size($size)
+  width: $size
+  height: $size
+
+=width($size, $of)
+  width: 100% * $size / $of
+
+=round($radius: 50%)
+  border-radius: $radius
+
+=bg-center($url)
+  background: url($url) center center no-repeat
+
+=hide-text()
+  font-size: 0
+  text-indent: -1000px
+  overflow: hidden
+
+=crop-text()
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+=transition($property: all)
+  transition: $property 0.2s ease-in-out
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+=reset-btn()
+  border: none
+  background: none
+  outline: none
+  margin: 0
+  padding: 0
+  cursor: pointer
+
+=align($type: 'hv')
+  position: absolute;
+  @if ($type == 'hv')
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  @else if ($type == 'h')
+    left: 50%
+    transform: translate(-50%, 0)
+  @else if ($type == 'v')
+    top: 50%
+    transform: translate(0, -50%)
+
+=font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+  @font-face
+    font-family: $font-family
+    font-weight: $weight
+    font-style: $style
+
+    @if $asset-pipeline == true
+      src: font-url('#{$file-path}.eot')
+      src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
+    @else
+      src: url('#{$file-path}.eot')
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
+
+=position($position: relative, $coordinates: null null null null)
+  @if type-of($position) == list
+    $coordinates: $position
+    $position: relative
+
+  $offsets: (top: nth($coordinates, 1), right: nth($coordinates, 2), bottom: nth($coordinates, 3), left: nth($coordinates, 4))
+
+  position: $position
+
+  @each $offset, $value in $offsets
+    @if is-length($value)
+      #{$offset}: $value
+
+// Retina
+=retina()
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+    @content
+
+// Large Devices, Wide Screens
+=lg()
+  @media only screen and (max-width: 1200px)
+    @content
+
+// Medium Devices, Desktops
+=md()
+  @media only screen and (max-width: 992px)
+    @content
+
+// Small Devices, Tablets
+=sm()
+  @media only screen and (max-width: 768px)
+    @content
+
+// Extra Small Devices, Phones
+=xs()
+  @media only screen and (max-width: 544px)
+    @content

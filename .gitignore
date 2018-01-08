@@ -1,0 +1,7 @@
+/_material/
+/node_modules/
+/dist/
+/.git/
+/src/css/
+/**/*.psd
+/**/Thumbs.db

@@ -1,0 +1,308 @@
+/* Positions*/
+
+.positions
+  .wrapper
+    padding-top: 30px
+    padding-bottom: 25px
+
+  &__filters-toggle
+    display: none
+    &:checked ~ .positions__filters
+      left: 0
+
+  &__filters-label
+    padding: 7px 10px
+    font: 12px/15px $font-header
+    text-transform: uppercase
+    letter-spacing: 2.4px
+    position: absolute
+    top: 30px
+    left: 30px
+    cursor: pointer
+    display: none
+    +transition(background-color)
+    &:hover
+      background-color: $primary-color
+    +sm()
+      display: block
+    +xs()
+      font-size: 0
+      +bg-center('../img/sprites/sprite.svg#equalizer')
+      background-size: 35%
+
+  &__filters
+    flex-shrink: 0
+    width: 26%
+    +lg()
+      width: 29%
+    +md()
+      width: 45%
+      padding-left: 30px
+    +sm()
+      /* Hide filters on small devises, toggle by checkbox */
+      position: absolute
+      z-index: 10
+      left: -110%
+      top: 59px
+      width: 320px
+      padding-top: 30px
+      background-color: rgba(255,255,255, 0.9)
+      box-shadow: 7px 13px 12.75px 2.25px rgba(0, 1, 1, 0.2)
+      +transition(left)
+
+  &__filter
+    margin-right: 30px
+    margin-bottom: 60px
+    +md()
+      margin-bottom: 40px
+
+  &__content
+    flex-grow: 1
+
+  &__title
+    @extend .filter__title
+    font: 12px/15px $font-default
+    +lg()
+      text-align: center
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    +lg()
+      justify-content: space-around
+
+  &__item
+    position: relative
+    width: 257px
+    height: 305px
+    margin-bottom: 70px
+    +md()
+      margin-bottom: 20px
+
+
+.positions
+  &__inner
+    display: none
+    padding-bottom: 5px
+
+  &__hovered
+    +transition(box-shadow)
+    &--active,
+    &:hover
+      position: absolute
+      z-index: 2
+      width: 277px
+      background-color: $white-color
+      border: 1px solid $border-color
+      box-shadow: 7px 13px 12.75px 2.25px rgba(0, 1, 1, 0.2)
+      top: 0
+      right: -10px
+      left: -10px
+      .positions__image
+        border: none
+        border-bottom: 1px solid $border-color
+        overflow: hidden
+        width: 100%
+        img
+          +transition()
+          transform: scale(1.1)
+          margin: 0 auto
+      .positions__info-btn,
+      .positions__like,
+      .positions__close-btn
+        display: block
+      .positions__inner
+        padding-left: 8px
+        padding-right: 8px
+        padding-bottom: 20px
+        display: block
+
+  &__image
+    position: relative
+    border: 1px solid $border-color
+    +size(255px)
+    box-sizing: content-box
+
+  &__link
+    display: block
+    width: 257px
+    margin: 0 auto
+
+  &__descr
+    margin-top: 18px
+
+  &__remark
+    color:  #bf303e
+    font: 14px $font-header
+    letter-spacing: 3.3px
+    padding: 10px 0 20px
+
+
+  .positions__info-btn
+    display: none
+    position: absolute
+    +size(65px)
+    color: $white-color
+    background-color: $dark-color
+    text-transform: uppercase
+    text-align: center
+    line-height: 65px
+    +align()
+    background: rgba($dark-color, 0.5)
+    &:hover
+      color: $primary-color
+      background: $dark-color
+
+  .positions__like
+    display: none
+    +reset-btn()
+    font-size: 0
+    position: absolute
+    bottom: 10px
+    +align('h')
+    opacity: 0.5
+    +transition(opacity)
+    &:hover
+      opacity: 1
+
+  .positions__close-btn
+    display: none
+    font-size: 0
+    +reset-btn()
+    position: absolute
+    top: 5px
+    right: 25px
+    opacity: 0.5
+    &:hover
+      opacity: 1
+
+.positions__controls
+  margin-top: -46px
+  width: 255px
+  +md()
+    margin-top: 0
+    width: auto
+
+.controls
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &__more-btn
+    +reset-btn()
+    padding: 3px 10px 13px
+    +transition(transform)
+    &:hover
+      opacity: 0.8
+      transform: translateY(3px)
+
+  &__label
+    font: bold 12px $font-header
+    letter-spacing: 2.3px
+    text-transform: uppercase
+    margin: 30px 5px 25px
+    +md()
+      margin: 10px 5px 10px
+
+  &__points
+    display: flex
+
+  &__link
+    display: block
+    margin: 4px 11px
+    +size(14px)
+    +round
+    +hide-text()
+    background-color:#eaeaea
+    border: 1px solid #a8a8a8
+    &--active,
+    &:hover
+      background-color: $dark-color
+
+
+.filter
+  font: 12px/15px $font-default
+  text-transform: uppercase
+  letter-spacing: 2.4px
+
+  &__title
+    text-transform: uppercase
+    margin-top: 7px
+    margin-bottom: 7px
+    letter-spacing: 2.4px
+    +lg()
+      text-align: center
+
+  &__block
+    text-transform: uppercase
+    border: 1px solid $border-color
+
+  &__caption
+    display: block
+    color: $white-color
+    background-color: $dark-color
+    padding: 10px 10px
+    &:hover
+      color: $dark-color
+      background-color: $primary-color
+
+  &__content
+    padding: 10px 0
+
+  &__item
+    margin: 20px 0
+    input[type="checkbox"]
+      display: none
+      & + label
+        cursor: pointer
+        color: #9c9c9c
+        display: flex
+        align-items: center
+        +transition(color)
+        &:hover
+          color: $dark-color
+      & + label:before
+        content: ''
+        +size(29px)
+        margin-right: 35px
+        background-color: $primary-color
+        +transition(background)
+      &:checked + label
+        color: $dark-color
+      &:checked + label:before
+        background: $primary-color url('../img/svg/like.svg') center center no-repeat
+        background-size: 60%
+
+.filter__item-check
+  display: flex
+  flex-wrap: wrap
+  margin-top: 20px
+  margin-bottom: 20px
+  input[type="checkbox"]
+    display: none
+  input[type="checkbox"] + label
+    color: $dark-color
+    border: 1px solid $border-color
+    padding: 10px 12px
+    margin-right: 8px
+    margin-bottom: 8px
+    cursor: pointer
+    +transition(background-color)
+    &:hover
+      background-color: lighten($primary-color, 20%)
+  input[type="checkbox"]:checked + label
+    background-color: $primary-color
+
+.filter--select
+  .filter__title
+    display: flex
+    align-items: center
+    i
+      margin-left: 10px
+      margin-right: 10px
+      flex-shrink: 0
+
+.filter--check
+  margin-right: 0
+  margin-bottom: 50px

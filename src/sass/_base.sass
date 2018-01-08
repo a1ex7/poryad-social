@@ -1,0 +1,107 @@
+*,
+*:after,
+*:before
+  box-sizing: border-box
+
+.clearfix:before,
+.clearfix:after
+  content: ''
+  display: table
+
+.clearfix:after
+  clear: both
+
+html, body
+  height: 100%
+
+.wrapper
+  position: relative
+  margin: 0 auto
+  border:
+    left: 1px solid $wrapper-border-color
+    right: 1px solid $wrapper-border-color
+    bottom: 1px solid $wrapper-border-color
+  padding: 0 30px
+  max-width: $wrapper-size
+
+.flex-container
+  display: flex
+  justify-content: space-between
+
+.hide-sm
+  +sm()
+    display: none
+
+.hide-xs
+  +xs()
+    display: none
+
+a,
+a:hover,
+a:visited,
+a:active,
+a:focus
+  text-decoration: none
+  outline: none
+  cursor: pointer
+  color: inherit
+  transition: all 0.2s ease
+
+a:hover
+  color: $primary-color
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+table
+  border-collapse: collapse
+
+input[type="text"],
+input[type="email"],
+textarea
+  border: none
+  outline: none
+  padding: 5px 30px 5px 10px
+  color: $dark-color
+  background-color: transparent
+  font: 15px $font-default
+  border: 1px solid $wrapper-border-color
+  transition: background-color 0.25s ease-in-out
+  &:hover,
+  &:focus
+    background-color: rgba(0,0,0,0.1)
+
+button,
+input[type="submit"]
+  cursor: pointer
+
+body
+  font-family: $font-text
+  font-size: $font-size
+  line-height: $line-height
+  color: $dark-color
+  background-color: $background-color
+  min-width: 320px
+  overflow-x: hidden
+
+
+/* Components */
+
+.c-button
+  +reset-btn()
+  display: inline-block
+  border: 1px solid $wrapper-border-color
+  padding: 10px 12px
+  text-transform: uppercase
+  font: bold 12px $font-header
+  letter-spacing: 2px
+  &:hover
+    background-color: $dark-color
+  &--inverse
+    color: $white-color
+    background-color: $dark-color
+    &:hover
+      color: $dark-color
+      background-color: darken($primary-color, 20%)

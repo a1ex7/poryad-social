@@ -1,0 +1,157 @@
+/* Footer */
+
+.footer
+  .wrapper
+    padding: 0
+  .flex-container
+    +md()
+      flex-wrap: wrap
+  background-color: $primary-color
+  background: $primary-color url('../img/bottom-mask.svg') center top no-repeat
+  background-size: contain
+
+  &__form,
+  &__contacts,
+  &__socials
+    +width(1,3)
+    padding: 160px 30px 40px 30px
+    display: flex
+    flex-direction: column
+
+  &__form,
+  &__contacts
+    +md()
+      +width(1,2)
+      padding-top: 120px
+      padding-bottom: 20px
+    +md()
+      padding-top: 60px
+    +xs()
+      width: 100%
+
+  &__socials
+    +md()
+      flex-grow: 1
+      padding-top: 20px
+      padding-bottom: 20px
+      border-top: 1px solid $wrapper-border-color
+
+  &__form
+    form
+      display: flex
+      flex-direction: column
+      background-color: $white-color
+      +width(3,4)
+      +lg()
+        width: 100%
+    input,
+    textarea
+      margin-top: -1px
+      letter-spacing: 2.3px
+      font-size: 12px
+      font-weight: bold
+      +placeholder()
+        color: $dark-color
+        font-size: 12px
+        font-weight: bold
+    input[type="text"],
+    input[type="email"],
+    textarea,
+      padding: 8px 30px 7px 8px
+    textarea
+      resize: none
+
+  &__btn
+    text-align: left
+    padding-left: 8px
+    border-color: $border-color
+
+  &__remark
+    margin-top: 5px
+    letter-spacing: 0.5px
+
+  &__contacts
+    border-left: 1px solid $wrapper-border-color
+    border-right: 1px solid $wrapper-border-color
+    +md()
+      border-right: none
+    +xs()
+      border-left: none
+      text-align: center
+      padding-top: 20px
+
+  &__contact
+    margin-top: 23px
+    margin-bottom: 7px
+
+  &__subscribe
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    +xs()
+      align-items: center
+    input
+      margin-bottom: 8px
+      padding-right: 10px
+    input[type="email"]
+      +placeholder()
+        color: $dark-color
+        font: bold 12px $font-header
+        letter-spacing: 2px
+        text-align: center
+
+  &__social
+    .social a
+      margin-right: 15px
+
+  &__title
+    text-transform: uppercase
+    font: bold 12px/15px $font-header
+    letter-spacing: 2.3px
+    margin-bottom: 6px
+    +md()
+      text-align: center
+
+  &__content
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    font-weight: bold
+
+.social--column
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  margin-top: 20px
+  +md()
+    flex-direction: row
+    justify-content: space-around
+  a
+    margin-bottom: 16px
+    +md()
+      text-align: center
+    +sm()
+      padding-top: 5px
+      padding-bottom: 5px
+    &:hover
+      color: $dark-color
+      transform: translateX(-5px)
+    i
+      margin-right: 18px
+      +xs()
+        margin-left: 10px
+        margin-right: 10px
+
+.footer
+  &__logo
+    align-self: flex-end
+  &__copyright
+    align-self: flex-end
+    margin-top: 15px
+    font: 10px $font-default
+    letter-spacing: $ls
+    color: #525151
+
+.logo--small
+  width: 98px
+  height: 72px

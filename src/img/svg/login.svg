@@ -1,0 +1,19 @@
+<svg id="login.svg" xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.8px;
+      }
+
+      .cls-2 {
+        
+      }
+    </style>
+  </defs>
+  <circle id="Еліпс_3" data-name="Еліпс 3" class="cls-1" cx="17.5" cy="12.406" r="11.5"/>
+  <path id="Багатокутник_1_копія" data-name="Багатокутник 1 копія" class="cls-2" d="M1100,55h16v3h-16V55Zm23,1.5-10,5.513V50.989Z" transform="translate(-1100 -44.094)"/>
+</svg>

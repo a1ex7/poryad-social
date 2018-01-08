@@ -1,0 +1,156 @@
+/* Banner */
+
+.banner
+  position: relative
+  .wrapper
+    min-height: 845px
+    +lg()
+      min-height: 800px
+    +md()
+      min-height: 750px
+    +sm()
+      min-height: 660px
+  &__slider
+    .slider__controls
+      transform: none
+      top: 33%
+      justify-content: center
+      +xs()
+        display: none
+
+      /* Magic centered method for slider controls */
+      label
+        margin-left: 535px
+        margin-right: 535px
+        flex-shrink: 0
+        +lg()
+          margin-left: 42%
+          margin-right: 42%
+
+    /* Kill all slide but first on mobile */
+    .slider__item:not(:first-child)
+      +xs()
+        display: none
+
+  &__slide
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 117px /* 117px - header size */
+    +sm()
+      padding-top: 55px
+
+  &__bg
+    background-image: url('../img/top-mask.svg')
+    background-position: center bottom
+    background-repeat: no-repeat
+    background-size: contain
+  &__bg--1
+    background-color: $primary-color
+  &__bg--2
+    background-color: $secondary-color
+  &__bg--3
+    background-color: $secondary-color
+
+  &__cloud
+    background-color: $white-color
+    font: 15px $font-default
+    letter-spacing: $lsh
+    +md()
+      background-color: transparent
+      font-size: 0
+    +xs()
+      visibility: hidden
+    &--small
+      margin-top: 29px
+      margin-left: 162px
+      +lg()
+        margin-left: 260px
+      padding-top: 96px
+      padding-left: 142px
+      width: 524px
+      height: 261px
+      background: url('../img/cloud1.png') center center no-repeat
+      +retina()
+        background: url('../img/sprites/sprite.svg#cloud1') center center no-repeat
+        background-size: cover
+      line-height: 30px
+      +md()
+        background-image: none
+    &--big
+      margin-left: 370px
+      padding-top: 46px
+      padding-left: 214px
+      width: 649px
+      height: 347px
+      line-height: 36px
+      background: url('../img/cloud2.png') center center no-repeat
+      +retina()
+        background: url('../img/sprites/sprite.svg#cloud2') center center no-repeat
+        background-size: cover
+      +md()
+        background-image: none
+      .banner__logo-min
+        margin-left: -33px
+        +md()
+          margin-left: 25px
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 128px
+        left: 213px
+        width: 118px
+        height: 115px
+        +bg-center('../img/birds.png')
+        +sm()
+          content: none
+
+  &__animation
+    +transition(transform)
+    &:hover
+      transform: translateX(20px)
+    &--1
+      width: 185px
+      height: 250px
+      margin-top: -75px
+      margin-right: 145px
+      background: url('../img/dog.png') center top no-repeat, url('../img/anim_shadow1.svg') center bottom no-repeat
+      +lg()
+        margin-right: 0
+    &--2
+      width: 271px
+      height: 413px
+      margin-right: 75px
+      margin-top: -274px
+      background: url('../img/old.png') center top no-repeat, url('../img/anim_shadow2.svg') center bottom no-repeat
+      +md()
+        margin-right: 0
+    &--3
+      width: 185px
+      height: 242px
+      margin-top: -90px
+      margin-right: 145px
+      background: url('../img/dog.png') center top no-repeat, url('../img/anim_shadow1.svg') center bottom no-repeat
+      +lg()
+        margin-right: 0
+
+  &__logo-min
+    +hide-text()
+    @extend .svg-logo_min
+    margin-left: 26px
+    +md()
+      margin-left: 60px
+
+  &__descr
+    font: 15px $font-default
+    text-transform: uppercase
+    color:  #1c1c1b
+    padding: 10px 10px 15px
+    letter-spacing: $lsh
+
+  &__scroll
+    display: block
+    font-size: 0 /* Text hiding */
+    &:hover
+      transform: translateY(5px)

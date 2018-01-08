@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="ar-left.svg" class="cls-1" d="M1098,23.5l10-5.513V29.011Z" transform="translate(-1098 -18)"/>
+</svg>

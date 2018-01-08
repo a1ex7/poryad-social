@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.469" height="19.469" viewBox="0 0 37.469 19.469">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #1a1a1a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 0.3px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="shevron-down.svg" class="cls-1" d="M581.646,621.353l0.708-.706,18,18-0.708.708Zm36.529-.237,0.709,0.709-18.059,18.06-0.709-.71Z" transform="translate(-581.531 -620.531)"/>
+</svg>

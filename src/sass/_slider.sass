@@ -1,0 +1,114 @@
+/* Mixin for slider */
+
+=slider__control
+  display: block
+  color: $white-color
+  text-transform: uppercase
+  font-family: $font-default
+  transform: rotate(-90deg)
+  letter-spacing: 2px
+  margin-top: 7px
+
+
+/* Slider */
+
+.slider
+  position: relative
+  input
+    display: none
+
+  #slide11:checked ~ .slider__slides .slider__inner
+    margin-left: 0
+  #slide12:checked ~ .slider__slides .slider__inner
+    margin-left: -100%
+  #slide13:checked ~ .slider__slides .slider__inner
+    margin-left: -200%
+
+  #slide21:checked ~ .slider__slides .slider__inner
+    margin-left: 0
+  #slide22:checked ~ .slider__slides .slider__inner
+    margin-left: -100%
+  #slide23:checked ~ .slider__slides .slider__inner
+    margin-left: -200%
+  #slide24:checked ~ .slider__slides .slider__inner
+    margin-left: -300%
+  #slide25:checked ~ .slider__slides .slider__inner
+    margin-left: -400%
+  #slide26:checked ~ .slider__slides .slider__inner
+    margin-left: -500%
+
+  &__slides
+    position: relative
+
+  &__overflow
+    width: 100%
+    overflow: hidden
+
+  &__inner
+    width: 600%
+    line-height: 0
+    +transition()
+
+  &__item
+    +width(1,6)
+    float: left
+    img
+      width: 100%
+
+  &__controls
+    display: flex
+    justify-content: space-between
+    position: absolute
+    +align('v')
+    width: 100%
+    height: 65px
+    label
+      display: none
+      background-color: $dark-color
+      width: 65px
+      height: 65px
+      cursor: pointer
+      +transition(opacity)
+      opacity: 0.8
+      &:hover
+        opacity: 1
+
+  #slide11:checked ~ .slider__controls label:nth-child(3),
+  #slide12:checked ~ .slider__controls label:nth-child(1),
+  #slide13:checked ~ .slider__controls label:nth-child(2),
+
+  #slide21:checked ~ .slider__controls label:nth-child(6),
+  #slide22:checked ~ .slider__controls label:nth-child(1),
+  #slide23:checked ~ .slider__controls label:nth-child(2),
+  #slide24:checked ~ .slider__controls label:nth-child(3),
+  #slide25:checked ~ .slider__controls label:nth-child(4),
+  #slide26:checked ~ .slider__controls label:nth-child(5)
+    display: block
+    order: 1
+    margin-left: 0
+    &:before
+      content: 'prev'
+      +slider__control
+    &:hover
+      &:before
+        color: $primary-color
+
+  #slide11:checked ~ .slider__controls label:nth-child(2),
+  #slide12:checked ~ .slider__controls label:nth-child(3),
+  #slide13:checked ~ .slider__controls label:nth-child(1),
+
+  #slide21:checked ~ .slider__controls label:nth-child(2),
+  #slide22:checked ~ .slider__controls label:nth-child(3),
+  #slide23:checked ~ .slider__controls label:nth-child(4),
+  #slide24:checked ~ .slider__controls label:nth-child(5),
+  #slide25:checked ~ .slider__controls label:nth-child(6),
+  #slide26:checked ~ .slider__controls label:nth-child(1)
+    display: block
+    order: 2
+    margin-right: 0
+    &:after
+      content: 'next'
+      +slider__control
+    &:hover
+      &:after
+        color: $primary-color

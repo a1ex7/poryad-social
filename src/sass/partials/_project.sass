@@ -1,0 +1,119 @@
+/* Project*/
+
+.project
+  .wrapper
+    +sm()
+      padding-left: 15px
+      padding-right: 15px
+  .flex-container
+    justify-content: flex-start
+    align-items: flex-start
+    +md()
+      justify-content: center
+      flex-wrap: wrap
+
+  &__slider
+    flex-shrink: 0
+    +xs()
+      flex-shrink: 1
+    width: 447px
+    padding: 40px 0 15px 0
+    .slider__slides
+      border: 1px solid $border-color
+    .slider__item
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        right: 0
+        bottom: 0
+        +bg-center('../img/logo-sirius.png')
+        +size(114px)
+        +xs()
+          +size(57px)
+          background-size: 57px 57px
+
+  &__like
+    opacity: 0.4
+    cursor: pointer
+    position: absolute
+    right: 21px
+    top: 17px
+    &:hover
+      opacity: 1
+
+  &__remark
+    @extend .positions__remark
+
+  &__content
+    margin-left: 20px
+    margin-right: 20px
+    padding: 40px 5px 15px 10px
+    +width(4,12)
+    +md()
+      flex-grow: 1
+      +width(1,2)
+    +sm()
+      padding: 20px 0 15px 0
+    +xs
+      width: 100%
+      margin-left: 0px
+      margin-right: 0px
+
+  &__title,
+  &__place
+    color: $dark-color
+    font-family: $font-header
+    letter-spacing: 2.5px
+
+  &__title
+    text-transform: uppercase
+    font-weight: bold
+
+  &__text
+    p
+      margin-top: 30px
+      span,
+      a
+        color: #bf303e
+
+  &__contacts
+    align-self: stretch
+    +width(3,12)
+    padding: 40px 0 15px 15px
+    border-left: 1px solid $border-color
+    +md()
+      +width(4,12)
+    +sm()
+      padding-top: 20px
+    +xs()
+      width: 100%
+      border-left: none
+      text-align: center
+
+.contacts
+  font: bold 12px $font-header
+  letter-spacing: 2px
+  &__contact
+    margin-top: 15px
+    margin-bottom: 18px
+    &--address
+      margin-top: 23px
+      margin-bottom: 8px
+    &--map
+      margin-top: 8px
+      margin-bottom: 27px
+      img
+        +xs()
+          margin-left: auto
+          margin-right: auto
+  &__more
+    text-transform: uppercase
+
+.social
+  a
+    &:hover
+      opacity: 0.6
+  &--hide-text
+    a
+      +hide-text()

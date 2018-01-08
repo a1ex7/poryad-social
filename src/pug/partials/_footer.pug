@@ -1,0 +1,40 @@
+// FOOTER
+footer.footer
+  .wrapper.flex-container
+
+    section.footer__form
+      h4.footer__title З питань розміщення проектів #[br] Заповніть форму
+      .footer__content
+        form(action="/", method="post")
+          input(type="submit", value="Відправити", name="send").footer__btn.c-button.c-button--inverse
+          input(type="text", placeholder="Ім'я", name="name")
+          input(type="text", placeholder="Прізвище", name="surname")
+          input(type="email", placeholder="E-mail", name="email")
+          textarea(name="text", rows="11", placeholder="Текст")
+        .footer__remark Всі поля заповняти обов’язково
+
+    section.footer__contacts
+      h4.footer__title Телефон #[br] 063 456 78 90
+      .footer__content
+        .footer__contact E-mail #[br]
+          a(href="mailto:info@porjad.gmail.com") info@porjad.gmail.com
+        .footer__contact
+          | Підпишіться і отримуйте новини про #[br] нові проекти та активність #[br] у вашому кабінеті
+        form.footer__subscribe(action="/", method="post")
+          input(type="email", placeholder="E-mail", name="email")
+          input(type="submit", value="Підписатися", name="subscribe").c-button.c-button--inverse
+
+    section.footer__socials
+      h4.footer__title Приєднуйтесь до нас #[br] у соціальних мережах
+      .footer__content
+        .social.social--column
+            a(href="//facebook.com").social__fb #[i.svg-fb]facebook
+            a(href="//vk.com").social__vk #[i.svg-vk]vkontakte
+            a(href="//google.com").social__gp #[i.svg-gp]google+
+            a(href="//instagram.com").social__instagram #[i.svg-instagram]instagram
+        .footer__logo
+          .logo.logo--small
+            a.logo__link(href="/")
+              img.logo__img(src="img/logo.png", alt="Поряд - соціальні проекти", width="98", srcset="img/logo2x.png 2x")
+        .footer__copyright © 2017 Соціальні проекти ‘ПОРЯД’. Всі права захищено.
+// End FOOTER
